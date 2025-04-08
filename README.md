@@ -101,3 +101,25 @@ python_design_patterns_example/
 │
 ├── user_and_product_info.py       # Orchestrates Factory client calls
 ├── main.py                        # Entry point: uses all modules
+
+
+
+
+Pattern / Principle	Where It's Used	Explanation			
+Singleton Pattern	Logger class (logger.py)	Ensures only one logger instance exists per logger name across the application.			
+
+Builder Pattern	DataExtraction class	Allows step-by-step construction of user info and returns a final built object.		
+
+Filter (Criteria) Pattern	Filter class	Filters user list based on specific condition (username == "snyder").	
+
+Facade Pattern	User	 Products classes	Simplifies access to client data-fetching methods (hides Client complexity).	
+
+Static Factory Method	Client.user() / Client.products()	Provides static methods to return data from an external API.	
+
+Single Responsibility Principle (SRP)	All files	 especially process.py	 logger.py	 etc.	Each class/function does one thing and does it well.
+
+DRY (Don't Repeat Yourself)	Logger	 DataExtraction	Logging and data extraction are centralized and reusable.		
+
+Encapsulation	Across all classes	Internal data (like user_dic	 data) is kept private to class logic.		
+
+Open/Closed Principle	Filter	 DataExtraction	Can extend filters or add more extract_*() methods without modifying core.		
